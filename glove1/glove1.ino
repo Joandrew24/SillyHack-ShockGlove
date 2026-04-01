@@ -1,7 +1,7 @@
 #include <esp_now.h>
 #include <WiFi.h>
 
-#define GLOVE_ID      1        
+#define GLOVE_ID      2        
 #define FLEX_INDEX    35       // change to 32 for glove2
 #define FLEX_RING     34       // change to 33 for glove2
 #define THRESHOLD_INDEX  3350
@@ -36,7 +36,7 @@ String detectGesture() {
   if (indexBent && ringBent)   return "rock";
   if (!indexBent && !ringBent) return "paper";
   if (!indexBent && ringBent)  return "scissors";
-  return "paper"; 
+  return "unknown";  
 }
 
 void onSent(const wifi_tx_info_t *info, esp_now_send_status_t status) {
