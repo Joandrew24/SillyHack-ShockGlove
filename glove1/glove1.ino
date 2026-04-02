@@ -1,11 +1,11 @@
 #include <esp_now.h>
 #include <WiFi.h>
 
-#define GLOVE_ID      2        
-#define FLEX_INDEX    35       // change to 32 for glove2
-#define FLEX_RING     34       // change to 33 for glove2
-#define THRESHOLD_INDEX  3350
-#define THRESHOLD_RING   3450
+#define GLOVE_ID      1        
+#define FLEX_INDEX    35
+#define FLEX_RING     34
+#define THRESHOLD_INDEX  3400
+#define THRESHOLD_RING   3500
 
 uint8_t serverMac[] = {0x88, 0x57, 0x21, 0x2E, 0xB0, 0x38};
 
